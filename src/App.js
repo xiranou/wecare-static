@@ -10,15 +10,17 @@ class App extends Component {
   }
 
   async initFirebase() {
-    const response = await fetch('/__/firebase/init.json');
-    const config = await response.text();
-    console.log(config);
+    // const response = await fetch('/__/firebase/init.json');
+    // const config = await response.text();
+    // console.log(config);
+    console.log(process.env.MOOKIE);
+        
   }
 
   render() {
     return (
       <div className="App">
-        WeCare
+        WeCare?
       </div>
     );
   }
