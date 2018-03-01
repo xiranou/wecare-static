@@ -1,13 +1,20 @@
 # WeCare
 
-dev
+### dev
+
 `yarn`
+
 `make run dev`
 
-deploy
+### deploy
+
 `yarn global add firebase-tools`
+
 `firebase login`
+
 `make deploy`
+
+### withFirebase
 
 `Firebase` container exports a HOC that passes the contextualized api and the firebase app initializing state to the wrapped component
 
@@ -23,6 +30,21 @@ Example useage:
 ```
 import withFirebase from './container/Firebase';
 
-const Mookie = withFirebase(App)
+const Mookie = withFirebase(App, env, apiKey, databaseURL);
+
+// in App.jsx
+class App extends Component {
+  ...
+
+  async mookie() {
+    const emails = await this.props.getEmails();
+    await this.props.saveEmail('mookie@gmail.com');
+  }
+
+  render() {
+    return this.props.firebaseInitialized ? <AppStuff /> : <LoadingState />
+  }
+}
+```
 
 See `src/index.js` for the current setup
