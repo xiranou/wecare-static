@@ -27,11 +27,11 @@
 }
 
 .hero-img {
-  padding: 20px 0 0;
+  padding: 60px 0 40px;
   width: 100%;
 }
 
-@media only screen and (min-width : 1000px) {
+@media only screen and (max-width : 1000px) {
   .hero-img {
     padding: 30px 0;
   }

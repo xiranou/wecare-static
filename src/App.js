@@ -70,7 +70,6 @@ class App extends Component {
     const userData = {
       firstName: this.firstName.value || null,
       lastName: this.lastName.value || null,
-      city: this.city.value || null,
       state: this.homestate.value || null,
       email: this.email.value || null,
     }
@@ -84,13 +83,21 @@ class App extends Component {
       <MuiThemeProvider theme={theme}>
         <div className={`App ${classes.root}`}>
           <Grid container spacing={24}>
-            <Grid className="left" item xs={12} sm={12} md={12} lg={7}>
+            <Grid className="left" item xs={12} sm={12} md={7}>
               <img className="hero-img" src="/comps.png" alt="one-box"/>
             </Grid>
-            <Grid className={classes.xtraPadding} item xs={12} sm={12} md={12} lg={5}>
+            <Grid className={classes.xtraPadding} item xs={12} sm={12} md={5}>
                 <Grid item xs={12}>
                   <Paper>
-                    <p className={classes.paraPadding}>WeCare is a subscription box service that takes your genentic makeup to find products and programs that will help you excel in life.</p>
+                    <h2 className={classes.paraPadding}>WeCare Alpha Sign-up</h2>
+                  </Paper>
+                  <Paper>
+                    <p className={classes.paraPadding}>
+                      WeCare is a subscription box service that takes your genentic makeup
+                      to find products and programs that will help you excel in life.
+                      Please sign-up below to join the Alpha test. We will select people to recieve
+                      boxes and give us feedback.
+                    </p>
                   </Paper>
                   <Paper>
                   <Grid container spacing={0}>
@@ -116,16 +123,6 @@ class App extends Component {
                     </Grid>
                     <Grid xs={12}>
                       <TextField
-                        id="city"
-                        label="City"
-                        placeholder="City"
-                        className={classes.textField}
-                        margin="normal"
-                        inputProps={{ ref: (city) => { this.city = city; } }}
-                      />
-                    </Grid>
-                    <Grid xs={12}>
-                      <TextField
                         id="state"
                         label="State"
                         placeholder="State"
@@ -145,9 +142,9 @@ class App extends Component {
                         inputProps={{ ref: (email) => { this.email = email; } }}
                       />
                     </Grid>
-                    <Grid xs={12}>
+                    <Grid className={classes.paraPadding} xs={12}>
                       <Button
-                        varient="raised"
+                        variant="raised"
                         color="primary"
                         disabled={this.state.disableInput}
                         onClick={this.saveEmail}

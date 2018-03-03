@@ -7,3 +7,12 @@ body {
   font-weight: 100;
   font-size: 26px;
 }
+
+h2 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	font-size: 48px;
+	background-color: #8dd2cb;
+	color: #fff;
+	margin: 10px 0;
+}
