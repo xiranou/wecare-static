@@ -12,6 +12,8 @@
 
 `firebase login`
 
+create an `.firebaserc` file under root and add the project name as default
+
 `make deploy`
 
 ### withFirebase
