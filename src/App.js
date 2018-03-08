@@ -93,9 +93,10 @@ class App extends Component {
                   </Paper>
                   <Paper>
                     <p className={classes.paraPadding}>
-                      WeCare is a subscription box service that takes your genentic makeup
-                      to find products and programs that will help you excel in life.
-                      Please sign-up below to join the Alpha test. We will select people to recieve
+                      Living your Life? Going to college? Getting married? Having a baby? WeCare is a
+                      subscription box service that takes your lifestyle and key life events
+                      to find products and programs that will help you excel in all your adventures.
+                      Please sign-up below to join the Alpha test. We will select people to receive
                       boxes and give us feedback.
                     </p>
                   </Paper>
